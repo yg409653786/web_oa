@@ -20,7 +20,7 @@ public class UserMapperTest {
 	public void testCountByExample() {
 		UserMapper userMapper=(UserMapper) ac.getBean("userMapper");
 		User record=new User();
-		record.setUsername("测试1");
+		record.setUsername("测试3");
 		record.setEmail("409653786@qq.com");
 		userMapper.insert(record);
 		System.out.println(userMapper.toString());
