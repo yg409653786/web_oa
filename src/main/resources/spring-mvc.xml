@@ -9,7 +9,17 @@
     http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 	<!-- 代替:注解适配器 注解映射器-->
-	<mvc:annotation-driven />
+	<mvc:annotation-driven conversion-service="conversionService"></mvc:annotation-driven>
+	
+	<!-- 自定义参数绑定-->
+	<bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+		<property name="converters">
+			<list>
+				<!-- 日期类型转换 -->
+				<bean class="com.sunyuki.oa.controller.converter.CustomDateConverter"></bean>
+			</list>
+		</property>
+	</bean>
 	
 	<!-- 自动扫描Controller，(Handler/Controller) -->
 	<context:component-scan base-package="com.sunyuki.oa.controller" />
