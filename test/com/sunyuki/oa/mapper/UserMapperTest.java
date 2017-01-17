@@ -18,12 +18,13 @@ public class UserMapperTest {
 	
 	@Test
 	public void testCountByExample() {
-		UserMapper userMapper=(UserMapper) ac.getBean("userMapper");
-		User record=new User();
-		record.setUsername("测试3");
-		record.setEmail("409653786@qq.com");
-		userMapper.insert(record);
-		System.out.println(userMapper.toString());
+		System.out.println(ac);
+//		UserMapper userMapper=(UserMapper) ac.getBean("userMapper");
+//		User record=new User();
+//		record.setUsername("测试3");
+//		record.setEmail("409653786@qq.com");
+//		userMapper.insert(record);
+//		System.out.println(userMapper.toString());
 	}
 
 	@Test
