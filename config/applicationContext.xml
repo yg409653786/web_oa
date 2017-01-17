@@ -9,7 +9,7 @@
         http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
         http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd   ">
 	
-	<import resource="dao/applicationContext-mybatis.xml"/>
+	<import resource="dao/applicationContext-dao.xml"/>
 	
 	<import resource="service/applicationContext-service.xml"/>
 	
