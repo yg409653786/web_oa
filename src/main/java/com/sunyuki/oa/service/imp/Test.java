@@ -1,4 +1,4 @@
-package main.java.com.sunyuki.oa.service.imp;
+package com.sunyuki.oa.service.imp;
 
 public class Test {
 

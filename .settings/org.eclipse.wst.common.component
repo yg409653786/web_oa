@@ -2,8 +2,12 @@
     <wb-module deploy-name="web_oa">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/config"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/test"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/com/sunyuki/oa/mapper"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/src/test/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
         <property name="context-root" value="web_oa"/>
         <property name="java-output-path" value="/web_oa/build/classes"/>
     </wb-module>

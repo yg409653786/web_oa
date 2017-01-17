@@ -1,4 +1,4 @@
-package main.java.com.sunyuki.oa.domain;
+package com.sunyuki.oa.domain;
 
 public class User {
     private Integer id;
