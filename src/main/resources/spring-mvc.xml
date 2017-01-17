@@ -29,12 +29,6 @@
 		<property name="prefix" value="/WEB-INF/jsp/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
-	
-	<!-- 配置SpringMVC拦截器 -->
-	<mvc:interceptors>
-	    <!-- Validator拦截器 -->
-	    <bean class="com.devefx.validation.support.spring.ValidatorInterceptor"/>
-	</mvc:interceptors>
 
 
 </beans>
