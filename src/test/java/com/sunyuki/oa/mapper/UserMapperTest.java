@@ -10,7 +10,7 @@ public class UserMapperTest {
 
 	@Before
 	public void setUp() throws Exception {
-		ac = new ClassPathXmlApplicationContext("applicationContext.xml");
+		ac = new ClassPathXmlApplicationContext("spring.xml");
 
 	}
 
