@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd   ">
+        	
+	<!-- 扫描service、dao组件 -->
+	<context:component-scan base-package="com.sunyuku.oa"/>
+	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+
+	<!-- 事务管理配置 -->
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<tx:annotation-driven transaction-manager="transactionManger" />
+	
+	
+	<!-- <tx:advice id="txAdvice" transaction-manager="transactionManager">	
+		<tx:attributes>
+			<tx:method name="count*" propagation="SUPPORTS" read-only="true"/>
+			<tx:method name="select*" propagation="SUPPORTS" read-only="true"/>
+			<tx:method name="insert*" propagation="REQUIRED"/>
+			<tx:method name="delete*" propagation="REQUIRED"/>
+			<tx:method name="update*" propagation="REQUIRED"/>
+		</tx:attributes>
+	</tx:advice>
+	
+	<aop:config>
+		所有子包里的任意类的任意方法的执行： 
+		<aop:pointcut expression="execution(* com.sunyuki.oa.service.imp..*.*(..))" id="pointcutTx"/>
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="pointcutTx"/>
+	</aop:config> -->
+		
+	
+</beans>
