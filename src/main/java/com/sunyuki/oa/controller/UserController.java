@@ -9,9 +9,11 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.HttpRequestHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
+@RequestMapping(value="item")
 public class UserController {
 
 	public ModelAndView handle(HttpServletRequest request, HttpServletResponse response, Object handler)
@@ -24,7 +26,7 @@ public class UserController {
 		return 0;
 	}
 	
-	@RequestMapping(name="items")
+	@RequestMapping(value="lsit",method={RequestMethod.GET,RequestMethod.POST})
 	public void handleRequest(HttpServletRequest arg0, HttpServletResponse response) throws ServletException, IOException {
 		response.getWriter().print("1234");
 	}
