@@ -8,12 +8,12 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import com.sunyuki.oa.domain.User;
 
 public class UserMapperTest {
-	
+
 	private ApplicationContext ac;
 
 	@Before
 	public void setUp() {
-		ac=new ClassPathXmlApplicationContext("classpath:spring.xml");
+		ac=new ClassPathXmlApplicationContext("classpath:applicationContext.xml");
 	}
 	
 	@Test
@@ -64,6 +64,5 @@ public class UserMapperTest {
 
 	@Test
 	public void testUpdateByPrimaryKey() {
-	}
-
+}
 }
