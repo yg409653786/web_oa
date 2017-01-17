@@ -1,4 +1,4 @@
-package com.sunyuki.oa.controller;
+package main.java.com.sunyuki.oa.controller;
 
 import java.io.IOException;
 

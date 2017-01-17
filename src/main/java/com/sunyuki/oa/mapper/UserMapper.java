@@ -1,8 +1,10 @@
-package com.sunyuki.oa.mapper;
+package main.java.com.sunyuki.oa.mapper;
 
-import com.sunyuki.oa.domain.User;
-import com.sunyuki.oa.domain.UserExample;
 import java.util.List;
+
+import main.java.com.sunyuki.oa.domain.User;
+import main.java.com.sunyuki.oa.domain.UserExample;
+
 import org.apache.ibatis.annotations.Param;
 
 public interface UserMapper {

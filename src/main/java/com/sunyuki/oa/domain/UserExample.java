@@ -1,4 +1,4 @@
-package com.sunyuki.oa.domain;
+package main.java.com.sunyuki.oa.domain;
 
 import java.util.ArrayList;
 import java.util.List;
