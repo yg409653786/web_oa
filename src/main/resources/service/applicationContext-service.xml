@@ -19,22 +19,4 @@
 	</bean>
 	<tx:annotation-driven transaction-manager="transactionManger" />
 	
-	
-	<!-- <tx:advice id="txAdvice" transaction-manager="transactionManager">	
-		<tx:attributes>
-			<tx:method name="count*" propagation="SUPPORTS" read-only="true"/>
-			<tx:method name="select*" propagation="SUPPORTS" read-only="true"/>
-			<tx:method name="insert*" propagation="REQUIRED"/>
-			<tx:method name="delete*" propagation="REQUIRED"/>
-			<tx:method name="update*" propagation="REQUIRED"/>
-		</tx:attributes>
-	</tx:advice>
-	
-	<aop:config>
-		所有子包里的任意类的任意方法的执行： 
-		<aop:pointcut expression="execution(* com.sunyuki.oa.service.imp..*.*(..))" id="pointcutTx"/>
-		<aop:advisor advice-ref="txAdvice" pointcut-ref="pointcutTx"/>
-	</aop:config> -->
-		
-	
 </beans>
