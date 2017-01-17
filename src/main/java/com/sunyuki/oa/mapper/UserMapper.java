@@ -1,11 +1,9 @@
 package com.sunyuki.oa.mapper;
 
-import java.util.List;
-
-import org.apache.ibatis.annotations.Param;
-
 import com.sunyuki.oa.domain.User;
 import com.sunyuki.oa.domain.UserExample;
+import java.util.List;
+import org.apache.ibatis.annotations.Param;
 
 public interface UserMapper {
     int countByExample(UserExample example);
