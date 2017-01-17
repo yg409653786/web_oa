@@ -5,7 +5,7 @@ target/
 *.releaseBackup
 
 # web application files
-#/web-app/WEB-INF
+#/web-oa/WEB-INF
 
 # IDE support files
 /.classpath
@@ -40,8 +40,8 @@ target/
 
 # older plugin install locations
 /plugins
-/web-app/plugins
-/web-app/WEB-INF/classes
+/web-oa/plugins
+/web-oa/WEB-INF/classes
 
 # "temporary" build files
 target/
