@@ -53,7 +53,6 @@
 	</bean>
 
 
-
 	<!-- 扫描service、dao组件 -->
 	<context:component-scan base-package="com.sunyuku.oa" />
 	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>

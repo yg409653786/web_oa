@@ -1,7 +1,5 @@
 package com.sunyuki.oa.mapper;
 
-import static org.junit.Assert.*;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
@@ -18,7 +16,7 @@ public class UserMapperTest {
 
 	@Test
 	public void testCountByExample() {
-		System.out.println(ac);
+		System.out.println(ac.getBean("userMapper"));
 	}
 
 }
