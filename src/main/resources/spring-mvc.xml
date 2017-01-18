@@ -10,10 +10,6 @@
 
 	<!-- 代替:注解适配器 注解映射器 -->
 	<mvc:annotation-driven conversion-service="conversionService" validator="validator">
-		 <mvc:message-converters>
-            <bean class="org.springframework.http.converter.StringHttpMessageConverter"/>
-            <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"/>
-	   	</mvc:message-converters>
 	</mvc:annotation-driven>
 
 	<!-- 自定义参数绑定 -->
