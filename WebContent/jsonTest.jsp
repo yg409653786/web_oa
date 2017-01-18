@@ -11,9 +11,13 @@
 	function jsonRequest() {
 		$.ajax({
 			type : "POST",
-			contentType:"application/x-www-form-urlencoded",
+			contentType:"application/json;charset=utf-8",
 			url : "json/jsonRequest.action",
-			data : "id=1&username=杨刚&email=409653786@qq.com",
+			data : {
+				"id":1,
+				"username":"杨刚",
+				"email":"409653786@qq.com"
+				},
 			success : function(msg) {
 				alert("Data Saved: " + msg);
 			}
@@ -23,7 +27,6 @@
 	function keyvalueRequest() {
 		$.ajax({
 			type : "GET",
-			contentType:"application/json",
 			url : "json/keyvalueRequest.action",
 			data : "id=1&username=杨刚&email=409653786@qq.com",
 			success : function(msg) {
