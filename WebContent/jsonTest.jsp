@@ -14,7 +14,7 @@
 			type : "post",
 			contentType : "application/json;charset=utf-8",
 			url : "${pageContext.request.contextPath}/json/jsonRequest.action",
-			data : '{"username":"yanggang","email":"409653786@qq.com"}',
+			data : '{"id":"1","username":"yanggang","email":"409653786@qq.com"}',
 			success : function(data) {
 				alert("" + data);
 			}
