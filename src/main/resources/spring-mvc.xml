@@ -20,8 +20,8 @@
 	<!-- 全局拦截器的配置 -->
 	<mvc:interceptors>
 		<mvc:interceptor>
-			<mvc:mapping path="/**"/>
-			<bean class="com.sunyuki.oa.filter.HandlerInterceptorCustom"></bean>
+			<mvc:mapping path="/**"/><!-- 表示所有的url和子url -->
+			<bean class="com.sunyuki.oa.interceptor.HandlerInterceptorCustom"></bean>
 		</mvc:interceptor>
 	</mvc:interceptors>
 

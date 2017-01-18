@@ -1,4 +1,4 @@
-package com.sunyuki.oa.filter;
+package com.sunyuki.oa.interceptor;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
