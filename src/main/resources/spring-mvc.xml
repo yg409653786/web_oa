@@ -22,15 +22,24 @@
 		</property>
 	</bean>
 
-
+	<!-- 校验器 -->
 	<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+		<!--hibernate 校验器 -->
 		<property name="providerClass" value="org.hibernate.validator.HibernateValidator" />
+		<!--指定校验使用资源 -->
 		<property name="validationMessageSource" ref="validatemessageSource"/>
 	</bean>
 	
+	<!-- 校验错误信息配置文件 -->
 	<bean id="validatemessageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
-		<property name="basename" value="classpath:validatemessages" />
+		<property name="basenames">
+			<list>
+				<value>classpath:validatemessages</value>
+			</list>		
+		</property>
+		<!-- 资源文件编码格式 -->
 		<property name="fileEncodings" value="utf-8" />
+		<!-- 缓存时间 -->
 		<property name="cacheSeconds" value="120" />
 	</bean>
 
