@@ -54,5 +54,6 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 
-
+	<!-- 全局异常处理器 -->
+	<bean class="com.sunyuki.oa.exception.CustomExceptionReslover"></bean>
 </beans>
