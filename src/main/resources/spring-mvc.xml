@@ -9,13 +9,21 @@
     http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 	<!-- 代替:注解适配器 注解映射器 -->
-	<mvc:annotation-driven conversion-service="conversionService" validator="validator">
+	<mvc:annotation-driven conversion-service="conversionService" validator="validator" >
 	</mvc:annotation-driven>
 	
 	<!-- 静态资源的访问 -->
 	<mvc:resources location="/img/" mapping="/img/**" cache-period="31556926"/>
 	<mvc:resources location="/js/" mapping="/js/**" cache-period="31556926"/>
 	<mvc:resources location="/css/" mapping="/css/**" cache-period="31556926"/>
+	
+	<!-- 全局拦截器的配置 -->
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/**"/>
+			<bean class="com.sunyuki.oa.filter.HandlerInterceptorCustom"></bean>
+		</mvc:interceptor>
+	</mvc:interceptors>
 
 	<!-- 自定义参数绑定 -->
 	<bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
