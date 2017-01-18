@@ -11,15 +11,15 @@ public class HandlerInterceptorCustom implements HandlerInterceptor {
 	//身份认证
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-		// TODO Auto-generated method stub
-		return false;//true 放行,false 拦截
+		System.out.println("preHandle");
+		return true;//true 放行,false 拦截
 	}
 
 	//将公用的模型数据(菜单导航),视图传到 modelAndView
 	@Override
 	public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler,
 			ModelAndView modelAndView) throws Exception {
-		// TODO Auto-generated method stub
+		System.out.println("postHandle");
 		
 	}
 	
@@ -28,8 +28,7 @@ public class HandlerInterceptorCustom implements HandlerInterceptor {
 	@Override
 	public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex)
 			throws Exception {
-		// TODO Auto-generated method stub
-		
+		System.out.println("afterCompletion");
 	}
 
 }
