@@ -8,10 +8,11 @@
     http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd  
     http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-	<!-- 代替:注解适配器 注解映射器-->
-	<mvc:annotation-driven conversion-service="conversionService"></mvc:annotation-driven>
-	
-	<!-- 自定义参数绑定-->
+	<!-- 代替:注解适配器 注解映射器 -->
+	<mvc:annotation-driven conversion-service="conversionService" validator="validator">
+	</mvc:annotation-driven>
+
+	<!-- 自定义参数绑定 -->
 	<bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
 		<property name="converters">
 			<list>
@@ -20,12 +21,26 @@
 			</list>
 		</property>
 	</bean>
+
+
+	<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+		<property name="providerClass" value="org.hibernate.validator.HibernateValidator" />
+		<property name="validationMessageSource" ref="validatemessageSource"/>
+	</bean>
 	
+	<bean id="validatemessageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basename" value="classpath:validatemessages" />
+		<property name="fileEncodings" value="utf-8" />
+		<property name="cacheSeconds" value="120" />
+	</bean>
+
+
 	<!-- 自动扫描Controller，(Handler/Controller) -->
 	<context:component-scan base-package="com.sunyuki.oa.controller" />
 
 	<!-- 视图解析器 -->
-	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/jsp/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
