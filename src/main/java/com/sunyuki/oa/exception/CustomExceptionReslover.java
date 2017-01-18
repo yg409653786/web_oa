@@ -4,6 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.core.annotation.Order;
+import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerExceptionResolver;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -12,6 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
  * 自定义异常解析类
  */
 @Order(value=1)
+@Component
 public class CustomExceptionReslover implements HandlerExceptionResolver{
 
 	public CustomExceptionReslover() {
