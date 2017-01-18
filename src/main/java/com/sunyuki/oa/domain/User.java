@@ -1,13 +1,15 @@
 package com.sunyuki.oa.domain;
 
-import javax.validation.constraints.Null;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+
+import com.sunyuki.oa.controller.validation.Validation1;
 
 public class User {
     private Integer id;
 
-    @Size(min=1,max=30,message="{user.name.length.error}")
-    @Null(message="{user.name.isNotNull}")
+    @Size(min=1,max=30,message="{user.name.length.error}",groups={Validation1.class})
+    @NotNull(message="{user.name.isNotNull}")
     private String username;
 
     private String email;

@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.sunyuki.oa.controller.validation.Validation1;
 import com.sunyuki.oa.domain.UserCustom;
 
 @Controller
@@ -34,9 +35,9 @@ public class UserController {
 	
 	//@Validated UserCustom userCustom,BindingResult bindingResult
 	//这两个必须成对出现,顺序不可更改
-	@RequestMapping(value="lsit",method={RequestMethod.GET,RequestMethod.POST})
+	@RequestMapping(value="list",method={RequestMethod.GET,RequestMethod.POST})
 	public String list(Model model,HttpServletRequest arg0, HttpServletResponse response,Integer id
-			,@Validated UserCustom userCustom,BindingResult bindingResult) throws ServletException, IOException {
+			,@Validated(value={Validation1.class}) UserCustom userCustom,BindingResult bindingResult) throws ServletException, IOException {
 		if(bindingResult.hasErrors()){
 			List<ObjectError> errors = bindingResult.getAllErrors();
 			for(ObjectError error:errors){
