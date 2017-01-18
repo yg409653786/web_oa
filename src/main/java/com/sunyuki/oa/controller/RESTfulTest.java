@@ -15,8 +15,10 @@ public class RESTfulTest {
 	// json请求 json返回
 	@RequestMapping(value = "/item/{id}")
 	public @ResponseBody UserCustom user(@PathVariable("id") Integer id) {
-		
-
+		System.out.println(id);
+		System.out.println(id);
+		System.out.println(id);
+		System.out.println(id);
 		return null;
 	}
 
