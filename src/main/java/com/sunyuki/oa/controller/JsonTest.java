@@ -8,18 +8,18 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.sunyuki.oa.domain.UserCustom;
 
 @Controller
-@RequestMapping(value = "json")
+@RequestMapping(value = "/json")
 public class JsonTest {
 
 	// json请求 json返回
-	@RequestMapping(value = "jsonRequest")
+	@RequestMapping(value = "/jsonRequest")
 	public @ResponseBody UserCustom jsonRequest(@RequestBody UserCustom userCustom) {
 
 		return userCustom;
 	}
 
 	// json请求 json返回
-	@RequestMapping(value = "keyvalueRequest")
+	@RequestMapping(value = "/keyvalueRequest")
 	public @ResponseBody UserCustom keyvalueRequest(UserCustom userCustom) {
 
 		return userCustom;
